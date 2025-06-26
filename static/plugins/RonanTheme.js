@@ -1,15 +1,19 @@
-document.addEventListener('DOMContentLoaded', function() {    
-    let currentUrl = window.location.pathname;
-    //let currentHost = window.location.hostname;
+document.addEventListener("DOMContentLoaded", function () {
+  let currentUrl = window.location.pathname;
+  //let currentHost = window.location.hostname;
 
-    //主页主题------------------------------------------------------------------------------
-    
-    if (currentUrl == '/' || currentUrl.includes('/index.html') || currentUrl.includes('/page')) {
-        console.log('应用主页主题');
-        let style = document.createElement("style");
-        style.innerHTML = `
+  //主页主题------------------------------------------------------------------------------
+
+  if (
+    currentUrl == "/" ||
+    currentUrl.includes("/index.html") ||
+    currentUrl.includes("/page")
+  ) {
+    console.log("应用主页主题");
+    let style = document.createElement("style");
+    style.innerHTML = `
         html {    
-            background: url('https://wowpb.pages.dev/file/2a84a86f2bb288032e3a1.jpg') no-repeat center center fixed;
+            background: url('https://github.com/zbhgis/BlogTheme/blob/main/static/imgs/background.jpg') no-repeat center center fixed;
             background-size: cover;
         }
 
@@ -50,19 +54,22 @@ document.addEventListener('DOMContentLoaded', function() {
         .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus, .pagination em:hover, .pagination em:focus {
             border-color: rebeccapurple;
         `;
-        document.head.appendChild(style);}
+    document.head.appendChild(style);
+  }
 
+  //文章页主题------------------------------------------------------------------------------
+  else if (
+    currentUrl.includes("/post/") ||
+    currentUrl.includes("/link.html") ||
+    currentUrl.includes("/about.html")
+  ) {
+    console.log("文章页主题");
 
-    //文章页主题------------------------------------------------------------------------------
-    
-    else if (currentUrl.includes('/post/') || currentUrl.includes('/link.html') || currentUrl.includes('/about.html')) {
-        console.log('文章页主题');
-
-        let style = document.createElement("style");
-        style.innerHTML = `
+    let style = document.createElement("style");
+    style.innerHTML = `
 
         html {    
-            background: url('https://wowpb.pages.dev/file/2a84a86f2bb288032e3a1.jpg') no-repeat center center fixed;
+            background: url('https://github.com/zbhgis/BlogTheme/blob/main/static/imgs/background.jpg') no-repeat center center fixed;
             background-size: cover;
         }
 
@@ -113,16 +120,14 @@ document.addEventListener('DOMContentLoaded', function() {
           margin-right: 2px;
         } 
         `;
-        document.head.appendChild(style);
-    } 
+    document.head.appendChild(style);
+  }
 
-
-    // 搜索页主题--------------------------------------------------------------------
-    
-    else if (currentUrl.includes('/tag')) {
-        console.log('应用搜索页主题');
-        let style = document.createElement("style");
-        style.innerHTML = `
+  // 搜索页主题--------------------------------------------------------------------
+  else if (currentUrl.includes("/tag")) {
+    console.log("应用搜索页主题");
+    let style = document.createElement("style");
+    style.innerHTML = `
         
         html {    
             background: url('https://wowpb.pages.dev/file/2a84a86f2bb288032e3a1.jpg') no-repeat center center fixed;
@@ -178,16 +183,18 @@ document.addEventListener('DOMContentLoaded', function() {
             height: 36px;
         }
         `;
-        document.head.appendChild(style);
-    
-        // 搜索框回车触发
-        let input = document.getElementsByClassName("form-control subnav-search-input float-left")[0];
-        let button = document.getElementsByClassName("btn float-left")[0];
-        input.addEventListener("keyup", function(event) {
-            event.preventDefault();
-            if (event.keyCode === 13) {
-                button.click();
-            }
-        });
-    }
-})
+    document.head.appendChild(style);
+
+    // 搜索框回车触发
+    let input = document.getElementsByClassName(
+      "form-control subnav-search-input float-left"
+    )[0];
+    let button = document.getElementsByClassName("btn float-left")[0];
+    input.addEventListener("keyup", function (event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+        button.click();
+      }
+    });
+  }
+});
