@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let style = document.createElement("style");
     style.innerHTML = `
         html {    
-            background: url('https://github.com/zbhgis/BlogTheme/blob/main/static/imgs/background.jpg') no-repeat center center fixed;
+            background: url('https://cdn.jsdelivr.net/gh/zbhgis/BlogTheme@0.0.2/static/imgs/background.jpg') no-repeat center center fixed;
             background-size: cover;
         }
 
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
     style.innerHTML = `
 
         html {    
-            background: url('https://github.com/zbhgis/BlogTheme/blob/main/static/imgs/background.jpg') no-repeat center center fixed;
+            background: url('https://cdn.jsdelivr.net/gh/zbhgis/BlogTheme@0.0.2/static/imgs/background.jpg') no-repeat center center fixed;
             background-size: cover;
         }
 
@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
     style.innerHTML = `
         
         html {    
-            background: url('https://wowpb.pages.dev/file/2a84a86f2bb288032e3a1.jpg') no-repeat center center fixed;
+            background: url('https://cdn.jsdelivr.net/gh/zbhgis/BlogTheme@0.0.2/static/imgs/background.jpg') no-repeat center center fixed;
             background-size: cover;
         }
 
